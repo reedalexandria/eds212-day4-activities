@@ -1,0 +1,39 @@
+---
+title: "r-exploring"
+author: "Alex Reed"
+date: "2022-08-04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(skimr)
+library(GGally)
+```
+
+```{r}
+names(diamonds)
+dim(diamonds)
+summary(diamonds)
+head(diamonds)
+tail(diamonds)
+skimr::skim(diamonds)
+
+```
+
+```{r}
+ggplot(data = diamonds, aes(x = price, y = carat))+
+  geom_point()
+
+
+```
+
+```{r}
+ggplot(data = diamonds, aes(x = carat))+
+  geom_histogram(fill = "yellow", color = "orange", alpha = 0.5)
+```
+
